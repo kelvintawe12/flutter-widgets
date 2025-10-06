@@ -1,0 +1,14 @@
+name: dialog_demo
+description: A small Flutter demo showing Dialog widgets and three properties.
+version: 0.1.0
+publish_to: "none"
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+flutter:
+  uses-material-design: true
