@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-// Main entry point of the application.
+// My Main entry point
 void main() {
   runApp(const DialogDemoApp());
 }
@@ -17,8 +17,8 @@ class DialogDemoApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // Enhanced theme with a modern color scheme, font, and elevations for better UI.
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        scaffoldBackgroundColor: Colors.grey[100],
+        primarySwatch: Colors.purple,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 244, 239, 239),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
