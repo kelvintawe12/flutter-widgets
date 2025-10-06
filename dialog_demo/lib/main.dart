@@ -52,8 +52,6 @@ class _DialogHomePageState extends State<DialogHomePage> {
   double _appBarOpacity = 0.0; // 0 = transparent, 1 = opaque
 
   // --- SIMPLE DIALOG ---
-  // Shows a simple dialog with language options. Enhanced with rounded corners, padding,
-  // and icons for better UI. Now async to handle the result robustly.
   Future<void> _showSimpleDialog(BuildContext context) async {
     final result = await showDialog<String>(
       context: context,
@@ -102,8 +100,6 @@ class _DialogHomePageState extends State<DialogHomePage> {
   }
 
   // --- ALERT DIALOG ---
-  // Shows an alert dialog for confirmation. Enhanced with icons, custom colors,
-  // and non-dismissible barrier for critical actions.
   Future<void> _showAlertDialog(BuildContext context) async {
     final result = await showDialog<String>(
       context: context,
@@ -112,7 +108,7 @@ class _DialogHomePageState extends State<DialogHomePage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Confirm Delete'),
-          content: const Text('Are you sure you want to delete this item? This action cannot be undone.'),
+          content: const Text('Are you sure you want to delete this item? This action is irreversible.'),
           icon: const Icon(Icons.warning_amber_rounded, color: Colors.red, size: 40),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           elevation: 8,
@@ -145,7 +141,6 @@ class _DialogHomePageState extends State<DialogHomePage> {
   }
 
   // --- CUPERTINO ALERT DIALOG ---
-  // iOS-style dialog. Enhanced with more content and custom actions.
   Future<void> _showCupertinoDialog(BuildContext context) async {
     final result = await showCupertinoDialog<String>(
       context: context,
@@ -186,8 +181,6 @@ class _DialogHomePageState extends State<DialogHomePage> {
   }
 
   // --- BOTTOM SHEET ---
-  // Modal bottom sheet with options. Enhanced with rounded corners, drag handle,
-  // and staggered animations for list items.
   Future<void> _showBottomSheet(BuildContext context) async {
     final result = await showModalBottomSheet<String>(
       context: context,
