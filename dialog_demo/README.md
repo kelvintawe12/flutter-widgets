@@ -29,4 +29,3 @@ Notes
 
 Screenshot
 
-_Replace this with a screenshot after you run the app._
