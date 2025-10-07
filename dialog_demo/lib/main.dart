@@ -37,7 +37,6 @@ class DialogDemoApp extends StatelessWidget {
   }
 }
 
-// The home page, now stateful to handle dialog results and display feedback (e.g., via Snackbar).
 // This adds robustness by processing user selections and providing visual confirmation.
 class DialogHomePage extends StatefulWidget {
   const DialogHomePage({super.key});
@@ -402,7 +401,6 @@ class _DialogHomePageState extends State<DialogHomePage> {
           child: Padding(
             padding: const EdgeInsets.all(24.0),
             // Use LayoutBuilder + SingleChildScrollView so the content centers on tall
-            // screens but becomes scrollable on small screens to avoid RenderFlex overflow.
             child: LayoutBuilder(
                 builder: (context, constraints) {
                   return SingleChildScrollView(
@@ -428,7 +426,6 @@ class _DialogHomePageState extends State<DialogHomePage> {
                           ],
                           const SizedBox(height: 32),
                           // Wrap buttons in a Card for grouped, elevated UI. Constrain width on
-                          // large screens so the card doesn't stretch too wide.
                           Center(
                             child: ConstrainedBox(
                               constraints: const BoxConstraints(maxWidth: 640),
